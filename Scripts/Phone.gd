@@ -8,6 +8,7 @@ var Boss_Read = false
 var Clinic_Read_1 = false
 var Clinic_Read_2 = false
 
+#This is how we cache nodes in a variable, I also like to cast them as their node type for IntellSense to work better. -AS
 onready var Wall_Paper: TextureRect = $Frame/Wall_Paper
 onready var Contacts: TextureRect = $Frame/Contacts
 onready var Message: TextureRect = $Frame/Messages
@@ -27,6 +28,11 @@ onready var Clinic_Msg_2: TextureRect = $Frame/Messages/TextMessages/Clinic2
 func _ready():
 	update_display()
 
+
+#This is a veru hacky cellphone UI. This is the function that does all the magic.
+#First we turn everything off, then turn what we need back on using a state machine.
+#We also update our contact texts. If we want to flesh out the cellphone system we'll
+#have to redo a lot of this as it uses hardcoded images. -AS
 func update_display() -> void:
 	update_dot()
 	Wall_Paper.visible = false
@@ -59,6 +65,7 @@ func update_display() -> void:
 				Clinic_Msg_2.visible = true
 				Clinic_Read_2 = true
 
+#Just a small helper function for the Text Message notification dot.
 func update_dot() -> void:
 	Notification_Dot.visible = false
 	var temp = 0
@@ -69,6 +76,9 @@ func update_dot() -> void:
 		Notification_Dot.visible = true
 		Notification_Label.set_text(str(temp))
 
+
+#Using Buttons and Signals, we basically just update our phone's state machine
+#Then update the display. -AS
 func _on_TextureButton_pressed():
 	Current_Screen = Screen.CONTACTS
 	update_display()
@@ -91,6 +101,6 @@ func _on_Clinic_pressed():
 	Current_Screen = Screen.CLINIC
 	update_display()
 
-
+#Debug Button. -AS
 func _on_Button_pressed():
 	Victory = true

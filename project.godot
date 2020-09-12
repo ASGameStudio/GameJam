@@ -69,7 +69,3 @@ e={
 "deadzone": 0.5,
 "events": [  ]
 }
-
-[rendering]
-
-environment/default_environment="res://default_env.tres"
