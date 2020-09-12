@@ -7,11 +7,13 @@ onready var Energy_Bar: TextureProgress = $Vital_Texture/Energy
 #Basically, this script listens for global signals then fires a function to update any UI
 #related elements. -AS
 func _ready():
-	Event.connect("player_health", self, "update_health", [])
+# warning-ignore:return_value_discarded
+#	Event.connect("player_health", self, "update_health", []) - NYI -AS
+# warning-ignore:return_value_discarded
 	Event.connect("player_energy", self, "update_energy", [])
 
 #Though we do update the Clock UI element on update frames. -AS
-func _process(delta):
+func _process(_delta):
 	Time_Label.set_text(str(Time.GetTimeString()))
 
 func update_health(_value) -> void:

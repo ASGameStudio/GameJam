@@ -7,11 +7,12 @@ var Vital_Energy_Drain = 10
 func _ready():
 	#Connect to a global signal of update time, which ticks every hour.
 	#And we update out Energy Bar for the first time. -AS
+	# warning-ignore:return_value_discarded
 	Event.connect("update_time", self, "Energy", [])
 	Event.emit_signal("player_energy", Vital_Energy)
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	#Points the sprite to the Mouse on every Physics Frame.
 	#We should cache the $Sprite in a node, or we could just rotate the entire player instead of their sprite. -AS
 	$Sprite.rotation = get_global_mouse_position().angle()
