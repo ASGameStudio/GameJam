@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Tiles/Base.tres" type="TileSet" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/ImportData.gd" type="Script" id=3]
+[ext_resource path="res://Sprites/Toilet.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Sink.png" type="Texture" id=5]
 
 [node name="World" type="Node2D"]
 script = ExtResource( 3 )
@@ -21,3 +23,13 @@ tile_data = PoolIntArray( 196609, 26, 0, 196610, 4, 0, 196611, 27, 0, 196612, 22
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 204, 82 )
+
+[node name="Toilet" type="Sprite" parent="."]
+position = Vector2( 533.374, 64.0982 )
+scale = Vector2( 0.426237, 0.403429 )
+texture = ExtResource( 4 )
+
+[node name="Sink" type="Sprite" parent="."]
+position = Vector2( 521.945, 106.773 )
+scale = Vector2( 0.200966, 0.427701 )
+texture = ExtResource( 5 )
