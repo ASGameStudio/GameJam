@@ -1,0 +1,163 @@
+{
+  "1": {
+    "Event Name": "Call from ex",
+    "Event Type": "Negative",
+    "Energy Impact": -10,
+    "Entertainment Impact": -20,
+    "Text": "\"Your ex calls you and wants to work things out. Shame she cheated on you with your best friend though.\""
+  },
+  "2": {
+    "Event Name": "Hot water heater broke",
+    "Event Type": "Negative",
+    "Energy Impact": -25,
+    "Entertainment Impact": -30,
+    "Text": "\"Your hot water heater decided to give you the cold shoulder... literally, that shower was awful.\""
+  },
+  "3": {
+    "Event Name": "New game announced",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 15,
+    "Text": "\"Hey you know that game series you like? Well, there's a new one on the way!\""
+  },
+  "4": {
+    "Event Name": "Mormons came to your door",
+    "Event Type": "Negative",
+    "Energy Impact": -10,
+    "Entertainment Impact": -15,
+    "Text": "\"Some Mormons came and knocked on your door for what felt like half an hour. Guess they can't take a hint.\""
+  },
+  "5": {
+    "Event Name": "Stubbed your toe",
+    "Event Type": "Negative",
+    "Energy Impact": -5,
+    "Entertainment Impact": -10,
+    "Text": "\"You could've sworn your coffee table wasn't there before, but your swollen toe tells you otherwise.\""
+  },
+  "6": {
+    "Event Name": "Free streaming",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 30,
+    "Text": "\"Well looks like the heartless folks at Comcast gave you a free month of Hulu.\""
+  },
+  "7": {
+    "Event Name": "Won lottery",
+    "Event Type": "Positive",
+    "Energy Impact": 5,
+    "Entertainment Impact": 10,
+    "Text": "\"You won the lottery!!! Well, only 20 bucks, but you still won the lottery.\""
+  },
+  "8": {
+    "Event Name": "Funny smell",
+    "Event Type": "Negative",
+    "Energy Impact": -10,
+    "Entertainment Impact": -10,
+    "Text": "\"Something smelled funny for awhile, and once you found the dead rat you kinda figured out what.\""
+  },
+  "9": {
+    "Event Name": "Bill credit",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 25,
+    "Text": "\"Turns out you got charged for you and your neighbors power last month, so congrats on no power bill this month!\""
+  },
+  "10": {
+    "Event Name": "Coupons",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 20,
+    "Text": "\"You checked you email and found coupons for your favorite snacks, and free delivery on top of it!\""
+  },
+  "11": {
+    "Event Name": "Call from brother",
+    "Event Type": "Positive",
+    "Energy Impact": 20,
+    "Entertainment Impact": 20,
+    "Text": "\"Your brother called to give you updates on your nieces. They grow up so fast.\""
+  },
+  "12": {
+    "Event Name": "Boss called",
+    "Event Type": "Neutral",
+    "Energy Impact": 20,
+    "Entertainment Impact": -10,
+    "Text": "\"Your boss called to check in on you while you quarantine, showing he cares. He proceeded to bitch about quotas not being met because of everyone getting quarantined, showing he doesn't care THAT much.\""
+  },
+  "13": {
+    "Event Name": "Free premium channel",
+    "Event Type": "Neutral",
+    "Energy Impact": -20,
+    "Entertainment Impact": 10,
+    "Text": "\"You got one of the \"premium\" channels for free, and spent a while enjoying it.\""
+  },
+  "14": {
+    "Event Name": "Trusted the fart",
+    "Event Type": "Negative",
+    "Energy Impact": -10,
+    "Entertainment Impact": -10,
+    "Text": "\"Should you have trusted a fart after a dinner of beans and rice? No. Did you trust it? Unfortunately.\""
+  },
+  "15": {
+    "Event Name": "Old friend messaged",
+    "Event Type": "Positive",
+    "Energy Impact": 25,
+    "Entertainment Impact": 25,
+    "Text": "\"Your old friend from middle school messaged you, and you enjoyed talking to him after all this time.\""
+  },
+  "16": {
+    "Event Name": "Received funny meme",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 15,
+    "Text": "\"A friend sent you a funny meme, showing you they are thinking of you.\""
+  },
+  "17": {
+    "Event Name": "Steam sale on favorite game",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 10,
+    "Text": "\"A game on your wishlist is finally on sale.\""
+  },
+  "18": {
+    "Event Name": "Got unfriended",
+    "Event Type": "Negative",
+    "Energy Impact": -5,
+    "Entertainment Impact": -10,
+    "Text": "\"Found that you got unfriended.\""
+  },
+  "19": {
+    "Event Name": "Unexpected bill",
+    "Event Type": "Negative",
+    "Energy Impact": -15,
+    "Entertainment Impact": -15,
+    "Text": "\"Out from left field comes a random bill you forgot about.\""
+  },
+  "20": {
+    "Event Name": "Sugar crash",
+    "Event Type": "Negative",
+    "Energy Impact": -10,
+    "Entertainment Impact": -15,
+    "Text": "\"Suddenly felt tired after a snack.\""
+  },
+  "21": {
+    "Event Name": "Got hacked",
+    "Event Type": "Negative",
+    "Energy Impact": -25,
+    "Entertainment Impact": -30,
+    "Text": "\"Email notification from a friend about unusual activity on your social media account.\""
+  },
+  "22": {
+    "Event Name": "Amazon package update",
+    "Event Type": "Positive",
+    "Energy Impact": 10,
+    "Entertainment Impact": 15,
+    "Text": "\"Your package has been shipped.\""
+  },
+  "23": {
+    "Event Name": "Power nap",
+    "Event Type": "Positive",
+    "Energy Impact": 5,
+    "Entertainment Impact": 10,
+    "Text": "\"Suddenly woke up after an unexpected nap, feeling great!\""
+  }
+}
