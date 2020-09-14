@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-const ACCELERATION = 500
-const MAX_SPEED = 250
-const FRICTION = 500
-
-var velocity = Vector2.ZERO
+export(float) var max_speed: float = 250
+var inputDir: Vector2 = Vector2.ZERO
+var velocity: Vector2 = Vector2.ZERO
+var use_acceleration: bool = true
+const acceleration: float = 30.0
+const friction: float = 60.0
 
 export(int) var Vital_Energy_Max: int = 100
 var Vital_Energy = Vital_Energy_Max
@@ -22,20 +23,30 @@ func _ready():
 #Creates movement for our player node
 #Make sure to check your input mapping -JS
 func _physics_process(delta):
-	var input_vector = Vector2.ZERO
-	input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	input_vector = input_vector.normalized()
-
-	if input_vector != Vector2.ZERO:
-		velocity = velocity.move_toward(input_vector * MAX_SPEED, ACCELERATION * delta)
-	else:
-		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta)
-
-	move_and_collide(velocity * delta)
+	#Moved Player Movement to it's own Function. -AS
+	Move()
+	
 	#Points the sprite to the Mouse on every Physics Frame.
 	#We should cache the $Sprite in a node, or we could just rotate the entire player instead of their sprite. -AS
-	$Sprite.rotation = get_global_mouse_position().angle()
+#	Commented out cause it doesn't look good with player.
+#	$Sprite.rotation = get_global_mouse_position().angle()
+
+
+#Moved movement back to function for ease of editing. -AS
+#Also drastically reduced friction/acceleration -AS
+func Move() -> void:
+	inputDir.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	inputDir.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
+	
+	if use_acceleration:
+		if inputDir != Vector2.ZERO:
+				velocity += inputDir * acceleration
+				velocity = velocity.clamped(max_speed)
+		else:
+			velocity = velocity.move_toward(Vector2.ZERO, friction)
+	else:
+		velocity * max_speed
+	var _Move = move_and_slide(velocity)
 
 #Currently, this function is used for Energy Drain.
 #As of now, Every hour tick will drain 10 Energy.
